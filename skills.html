@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Skills</title>
+
+    <style>
+        body {
+            background-color: #FFFFFF;
+            font-family: Arial, sans-serif;
+            margin: 25px;
+            color: #1E293B;
+            line-height: 1.6;
+        }
+
+        h1 {
+            color: #142D4E;
+            border-bottom: 3px solid #D4AF37;
+            padding-bottom: 10px;
+        }
+
+        h3 {
+            color: #142D4E;
+            margin-top: 0;
+        }
+
+        .box {
+            background-color: #F1F5F9;
+            padding: 18px;
+            margin-bottom: 18px;
+            border: 1px solid #D6DEE8;
+            border-left: 5px solid #142D4E;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+
+        .box:hover {
+            background-color: #FFF9E8;
+            border-left-color: #D4AF37;
+            transform: translateY(-2px);
+        }
+
+        ul {
+            padding-left: 25px;
+        }
+
+        li {
+            margin: 9px 0;
+        }
+
+        li::marker {
+            color: #D4AF37;
+        }
+
+        button {
+            background-color: #142D4E;
+            color: #FFFFFF;
+            border: 2px solid #D4AF37;
+            padding: 11px 22px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 15px;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            background-color: #D4AF37;
+            color: #142D4E;
+        }
+
+        #result {
+            color: #142D4E;
+            font-weight: bold;
+            margin-top: 15px;
+        }
+    </style>
+
+    <script>
+        function showSkills() {
+            document.getElementById("result").innerHTML =
+                "I am continuously improving my mathematical, programming and problem-solving skills.";
+        }
+    </script>
+</head>
+
+<body>
+
+    <h1>My Skills</h1>
+
+    <div class="box">
+
+        <h3>Mathematical Skills</h3>
+
+        <ul>
+            <li>Linear Algebra</li>
+            <li>Calculus</li>
+            <li>Probability and Statistics</li>
+            <li>Discrete Mathematics</li>
+            <li>Graph Theory</li>
+        </ul>
+
+    </div>
+
+    <div class="box">
+
+        <h3>Technical Skills</h3>
+
+        <ul>
+            <li>C Programming</li>
+            <li>HTML and CSS</li>
+            <li>JavaScript Basics</li>
+            <li>Data Structures and Algorithms</li>
+            <li>Git and Linux Basics</li>
+        </ul>
+
+    </div>
+
+    <div class="box">
+
+        <h3>Currently Learning</h3>
+
+        <ul>
+            <li>Python Programming</li>
+            <li>NumPy and Pandas</li>
+            <li>Artificial Intelligence</li>
+            <li>Machine Learning</li>
+        </ul>
+
+    </div>
+
+    <button onclick="showSkills()">Know More</button>
+
+    <p id="result"></p>
+
+</body>
+</html>

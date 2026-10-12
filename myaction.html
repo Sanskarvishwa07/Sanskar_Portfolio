@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Home</title>
+
+    <style>
+        body {
+            background-color: #FFFFFF;
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            color: #1E293B;
+        }
+
+        h1 {
+            color: #142D4E;
+            border-bottom: 3px solid #D4AF37;
+            padding-bottom: 10px;
+        }
+
+        h2 {
+            color: #142D4E;
+        }
+
+        p {
+            font-size: 16px;
+            line-height: 1.8;
+        }
+
+        .highlight {
+            color: #A17C16;
+            font-weight: bold;
+        }
+
+        button {
+            background-color: #142D4E;
+            color: white;
+            padding: 12px 20px;
+            border: 2px solid #D4AF37;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 15px;
+        }
+
+        button:hover {
+            background-color: #D4AF37;
+            color: #142D4E;
+        }
+
+        #demo {
+            color: #142D4E;
+            font-weight: bold;
+        }
+
+        .welcome-box {
+            background-color: #F1F5F9;
+            border-left: 5px solid #D4AF37;
+            padding: 15px;
+            margin-top: 20px;
+        }
+    </style>
+
+    <script>
+        function showMessage() {
+            document.getElementById("demo").innerHTML =
+            "Thank you for visiting my portfolio!";
+        }
+    </script>
+</head>
+
+<body>
+
+    <h1>Welcome to My Portfolio</h1>
+
+    <div class="welcome-box">
+        <h2>Hi, I am Sanskar Vishwakarma.</h2>
+
+        <p>
+            I am pursuing <span class="highlight">
+            M.Sc. Mathematics with Computer Science</span>
+            at Jamia Millia Islamia, New Delhi.
+        </p>
+    </div>
+
+    <h2>About My Interests</h2>
+
+    <p>
+        I have a strong interest in Mathematics,
+        Programming, Data Structures and Computer Science.
+    </p>
+
+    <p>
+        I am also interested in learning new technologies
+        and developing practical projects to improve
+        my technical knowledge.
+    </p>
+
+    <h2>Explore My Portfolio</h2>
+
+    <p>
+        Use the navigation links on the left to explore
+        my education, skills, experience, projects,
+        resume and contact information.
+    </p>
+
+    <button onclick="showMessage()">Click Here</button>
+
+    <p id="demo"></p>
+
+</body>
+</html>

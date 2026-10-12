@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Address</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #142D4E;
+            color: white;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 10px 25px;
+        }
+
+        .header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 15px;
+            min-height: 115px;
+        }
+
+        .logo {
+            width: 105px;
+            height: 105px;
+            object-fit: contain;
+            background-color: white;
+            border: 3px solid #D4AF37;
+            border-radius: 50%;
+            flex-shrink: 0;
+        }
+
+        .photo {
+            width: 115px;
+            height: 115px;
+            object-fit: cover;
+            border: 3px solid #D4AF37;
+            border-radius: 50%;
+            flex-shrink: 0;
+        }
+
+        .details {
+            text-align: center;
+            flex: 1;
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 27px;
+            color: white;
+        }
+
+        h3 {
+            margin: 7px 0;
+            font-size: 15px;
+            font-weight: normal;
+        }
+
+        .details:hover {
+            color: #D4AF37;
+            cursor: pointer;
+        }
+
+        h1:hover {
+            color: #D4AF37;
+        }
+
+        @media (max-width: 650px) {
+            body {
+                padding: 8px;
+            }
+
+            .header {
+                gap: 8px;
+            }
+
+            .logo {
+                width: 70px;
+                height: 70px;
+            }
+
+            .photo {
+                width: 75px;
+                height: 75px;
+            }
+
+            h1 {
+                font-size: 19px;
+            }
+
+            h3 {
+                font-size: 12px;
+            }
+        }
+    </style>
+
+    <script>
+        function welcome() {
+            alert("Welcome to Sanskar's Portfolio!");
+        }
+    </script>
+</head>
+
+<body>
+
+    <div class="header">
+
+        <img src="jmi-logo.png"
+             alt="JMI Logo"
+             class="logo">
+
+        <div class="details" onclick="welcome()">
+
+            <h1>SANSKAR VISHWAKARMA</h1>
+
+            <h3>M.Sc. Mathematics with Computer Science</h3>
+
+            <h3>Jamia Millia Islamia, New Delhi</h3>
+
+        </div>
+
+        <img src="sanskar.jpg"
+             alt="Sanskar's Photo"
+             class="photo">
+
+    </div>
+
+</body>
+</html>

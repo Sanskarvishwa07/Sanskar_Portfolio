@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>About Me</title>
+
+    <style>
+        body {
+            background-color: #FFFFFF;
+            color: #1E293B;
+            font-family: Arial, sans-serif;
+            margin: 25px;
+            line-height: 1.7;
+        }
+
+        h1 {
+            color: #142D4E;
+            border-bottom: 3px solid #D4AF37;
+            padding-bottom: 10px;
+        }
+
+        h2, h3 {
+            color: #142D4E;
+        }
+
+        .info {
+            background-color: #F1F5F9;
+            padding: 20px;
+            border-left: 5px solid #D4AF37;
+            border-radius: 5px;
+            margin: 20px 0;
+        }
+
+        p {
+            font-size: 16px;
+        }
+
+        ul {
+            padding-left: 25px;
+        }
+
+        li {
+            margin: 10px 0;
+        }
+
+        li::marker {
+            color: #D4AF37;
+        }
+
+        .goal {
+            background-color: #F1F5F9;
+            padding: 15px;
+            border: 1px solid #D6DEE8;
+            border-radius: 5px;
+        }
+
+        button {
+            background-color: #142D4E;
+            color: #FFFFFF;
+            border: 2px solid #D4AF37;
+            padding: 11px 22px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 15px;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            background-color: #D4AF37;
+            color: #142D4E;
+        }
+
+        #details {
+            color: #142D4E;
+            font-weight: bold;
+            margin-top: 15px;
+        }
+
+        .highlight {
+            color: #8A6A12;
+            font-weight: bold;
+        }
+    </style>
+
+    <script>
+        function showDetails() {
+            document.getElementById("details").innerHTML =
+                "I am continuously learning programming, improving my problem-solving skills, and exploring new technologies.";
+        }
+    </script>
+</head>
+
+<body>
+
+    <h1>About Me</h1>
+
+    <div class="info">
+
+        <h2>Sanskar Vishwakarma</h2>
+
+        <p>
+            Hello! My name is <span class="highlight">
+            Sanskar Vishwakarma</span>.
+            I am pursuing M.Sc. Mathematics with Computer Science
+            at Jamia Millia Islamia, New Delhi.
+        </p>
+
+        <p>
+            I have a background in Mathematics and a strong interest
+            in Computer Science, programming and problem-solving.
+        </p>
+
+    </div>
+
+    <h3>My Interests</h3>
+
+    <ul>
+        <li>Mathematics</li>
+        <li>Programming and Problem-Solving</li>
+        <li>Data Structures and Algorithms</li>
+        <li>Artificial Intelligence and Machine Learning</li>
+        <li>Web Development</li>
+    </ul>
+
+    <h3>My Career Goal</h3>
+
+    <div class="goal">
+
+        <p>
+            My goal is to combine mathematical knowledge with
+            computer science to develop useful software applications
+            and intelligent systems.
+        </p>
+
+    </div>
+
+    <br>
+
+    <button onclick="showDetails()">Know More</button>
+
+    <p id="details"></p>
+
+</body>
+</html>

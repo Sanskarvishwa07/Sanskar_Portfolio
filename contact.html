@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Contact Me</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        body {
+            background-color: #F1F5F9;
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            color: #142D4E;
+        }
+
+        h2 {
+            color: #142D4E;
+            border-bottom: 3px solid #D4AF37;
+            padding-bottom: 10px;
+        }
+
+        .heading {
+            text-align: center;
+            margin-bottom: 25px;
+        }
+
+        .container {
+            background-color: white;
+            padding: 20px;
+            border: 1px solid #D4AF37;
+            border-radius: 8px;
+            overflow-x: auto;
+        }
+
+        table {
+            background-color: white;
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        td {
+            padding: 10px;
+            border: 1px solid #D5DCE5;
+        }
+
+        label {
+            font-weight: bold;
+            color: #142D4E;
+        }
+
+        input, select, textarea {
+            font-family: Arial, sans-serif;
+            padding: 8px;
+            border: 1px solid #AAB7C4;
+            border-radius: 4px;
+            max-width: 100%;
+            box-sizing: border-box;
+        }
+
+        input[type="text"],
+        input[type="password"],
+        input[type="email"],
+        input[type="tel"],
+        input[type="date"],
+        input[type="file"],
+        textarea {
+            width: 100%;
+        }
+
+        input:focus, select:focus, textarea:focus {
+            outline: 2px solid #D4AF37;
+            background-color: #FFFDF4;
+        }
+
+        input[type="radio"],
+        input[type="checkbox"] {
+            accent-color: #142D4E;
+        }
+
+        input[type="submit"],
+        input[type="reset"] {
+            background-color: #142D4E;
+            color: white;
+            padding: 10px 20px;
+            border: 2px solid #D4AF37;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        input[type="submit"]:hover,
+        input[type="reset"]:hover {
+            background-color: #D4AF37;
+            color: #142D4E;
+        }
+
+        #result {
+            color: #142D4E;
+            font-weight: bold;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        @media (max-width: 700px) {
+            body {
+                margin: 10px;
+            }
+
+            .container {
+                padding: 10px;
+            }
+
+            table {
+                min-width: 650px;
+            }
+        }
+    </style>
+
+    <script>
+        function checkName() {
+            var name = document.getElementById("fname").value;
+
+            if (name.trim() == "") {
+                alert("Please enter your first name.");
+            }
+        }
+
+        function checkEmail() {
+            var email = document.getElementById("email").value;
+
+            if (email != "" &&
+                !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+                alert("Please enter a valid email address.");
+            }
+        }
+
+        function submitForm(event) {
+            event.preventDefault();
+
+            var name = document.getElementById("fname").value.trim();
+            var email = document.getElementById("email").value.trim();
+            var phone = document.getElementById("phone").value.trim();
+            var comments = document.getElementById("comments").value.trim();
+
+            if (name == "" || email == "" ||
+                phone == "" || comments == "") {
+                alert("Please fill in all required fields.");
+                return false;
+            }
+
+            if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+                alert("Please enter a valid email address.");
+                return false;
+            }
+
+            if (!/^[0-9]{10}$/.test(phone)) {
+                alert("Please enter a valid 10-digit phone number.");
+                return false;
+            }
+
+            document.getElementById("result").innerHTML =
+                "Thank you, " + name +
+                "! Your query has been submitted successfully.";
+
+            return false;
+        }
+
+        function showMessage() {
+            alert("The form will be reset.");
+        }
+    </script>
+</head>
+
+<body>
+         <div class="heading">
+           <h2>Contact Me</h2>
+       
+         </div>
+
+    <div class="container">
+
+        <form name="RegForm" onsubmit="submitForm(event)">
+
+            <table>
+                <tr>
+                    <td><label for="fname">First Name</label></td>
+                    <td>
+                        <input type="text" name="fname" id="fname"
+                               maxlength="30" onblur="checkName()"
+                               required>
+                    </td>
+
+                    <td><label for="mname">Middle Name</label></td>
+                    <td>
+                        <input type="text" name="mname" id="mname"
+                               placeholder="Optional">
+                    </td>
+
+                    <td><label for="lname">Last Name</label></td>
+                    <td>
+                        <input type="text" name="lname" id="lname">
+                    </td>
+                </tr>
+
+                <tr>
+                    <td><label for="pass">Password</label></td>
+                    <td>
+                        <input type="password" name="pass" id="pass">
+                    </td>
+
+                    <td colspan="2"></td>
+
+                    <td><label for="pin">PIN</label></td>
+                    <td>
+                        <input type="password" name="pin" id="pin"
+                               maxlength="6" size="6">
+                    </td>
+                </tr>
+
+                <tr>
+                    <td><label>Gender</label></td>
+                    <td>
+                        <input type="radio" name="gender" value="Male"
+                               id="male" checked>
+                        <label for="male">Male</label>
+                    </td>
+                    <td>
+                        <input type="radio" name="gender" value="Female"
+                               id="female">
+                        <label for="female">Female</label>
+                    </td>
+                    <td colspan="3">
+                        <input type="radio" name="gender" value="Other"
+                               id="other">
+                        <label for="other">Other</label>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td><label>Interests</label></td>
+                    <td>
+                        <input type="checkbox" name="interests"
+                               value="Mathematics" id="math">
+                        <label for="math">Mathematics</label>
+                    </td>
+                    <td>
+                        <input type="checkbox" name="interests"
+                               value="Programming" id="programming">
+                        <label for="programming">Programming</label>
+                    </td>
+                    <td>
+                        <input type="checkbox" name="interests"
+                               value="AI" id="ai">
+                        <label for="ai">Artificial Intelligence</label>
+                    </td>
+                    <td>
+                        <input type="checkbox" name="interests"
+                               value="Data Science" id="ds">
+                        <label for="ds">Data Science</label>
+                    </td>
+                    <td>
+                        <input type="checkbox" name="interests"
+                               value="Web Development" id="web">
+                        <label for="web">Web Development</label>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td><label for="birthday">Date of Birth</label></td>
+                    <td>
+                        <input type="date" id="birthday" name="birthday">
+                    </td>
+
+                    <td><label for="email">Email</label></td>
+                    <td>
+                        <input type="email" id="email" name="email"
+                               onblur="checkEmail()" required>
+                    </td>
+
+                    <td><label for="phone">Phone</label></td>
+                    <td>
+                        <input type="tel" id="phone" name="phone"
+                               maxlength="10" pattern="[0-9]{10}" required>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td><label for="specz">Specialization</label></td>
+                    <td>
+                        <select name="specz" id="specz" multiple size="3">
+                            <option value="Algebra">Algebra</option>
+                            <option value="Mathematics">Mathematics</option>
+                            <option value="Data Science" selected>
+                                Data Science
+                            </option>
+                            <option value="AI">Artificial Intelligence</option>
+                            <option value="Mathematical Modelling">
+                                Mathematical Modelling
+                            </option>
+                        </select>
+                    </td>
+
+                    <td><label for="pfile">Upload Resume</label></td>
+                    <td colspan="3">
+                        <input type="file" id="pfile" name="pfile"
+                               accept=".pdf,.doc,.docx">
+                    </td>
+                </tr>
+
+                <tr>
+                    <td><label for="comments">Description</label></td>
+                    <td colspan="5">
+                        <textarea id="comments" name="comments"
+                                  rows="5"
+                                  placeholder="Enter your query or message here"
+                                  required></textarea>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td colspan="3" style="text-align:center;">
+                        <input type="submit" value="Submit Query">
+                    </td>
+
+                    <td colspan="3" style="text-align:center;">
+                        <input type="reset" value="Reset"
+                               onclick="showMessage()">
+                    </td>
+                </tr>
+            </table>
+
+        </form>
+    </div>
+
+    <p id="result"></p>
+
+</body>
+</html>

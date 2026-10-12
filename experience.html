@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Experience</title>
+
+    <style>
+        body {
+            background-color: #FFFFFF;
+            font-family: Arial, sans-serif;
+            margin: 25px;
+            color: #1E293B;
+            line-height: 1.7;
+        }
+
+        h1 {
+            color: #142D4E;
+            border-bottom: 3px solid #D4AF37;
+            padding-bottom: 10px;
+        }
+
+        h2 {
+            color: #142D4E;
+        }
+
+        .box {
+            background-color: #F1F5F9;
+            padding: 20px;
+            margin-bottom: 20px;
+            border: 1px solid #D6DEE8;
+            border-left: 5px solid #142D4E;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+
+        .box:hover {
+            background-color: #FFF9E8;
+            border-left-color: #D4AF37;
+            transform: translateY(-2px);
+        }
+
+        .label {
+            color: #142D4E;
+            font-weight: bold;
+        }
+
+        ul {
+            padding-left: 25px;
+        }
+
+        li {
+            margin: 10px 0;
+        }
+
+        li::marker {
+            color: #D4AF37;
+        }
+
+        .development {
+            background-color: #F1F5F9;
+            padding: 15px;
+            border-left: 5px solid #D4AF37;
+            border-radius: 5px;
+        }
+
+        button {
+            background-color: #142D4E;
+            color: #FFFFFF;
+            border: 2px solid #D4AF37;
+            padding: 11px 22px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 15px;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            background-color: #D4AF37;
+            color: #142D4E;
+        }
+
+        #result {
+            color: #142D4E;
+            font-weight: bold;
+            margin-top: 15px;
+        }
+    </style>
+
+    <script>
+        function showExperience() {
+            document.getElementById("result").innerHTML =
+                "Teaching has helped me improve my communication, conceptual explanation and problem-solving skills.";
+        }
+    </script>
+</head>
+
+<body>
+
+    <h1>My Experience</h1>
+
+    <div class="box">
+
+        <h2>Mathematics Teacher</h2>
+
+        <p>
+            <span class="label">Institution:</span>
+            Saraswati Higher Secondary School
+        </p>
+
+        <p>
+            <span class="label">Duration:</span>
+            July 2024 – March 2025
+        </p>
+
+        <p>
+            <span class="label">Subject:</span>
+            Mathematics
+        </p>
+
+        <p>
+            <span class="label">Classes:</span>
+            Class 11 and Class 12
+        </p>
+
+        <p>
+            Taught mathematical concepts and helped students
+            understand formulas, solve numerical problems and
+            prepare for examinations.
+        </p>
+
+    </div>
+
+    <h2>Teaching Skills</h2>
+
+    <ul>
+        <li>Explaining mathematical concepts clearly</li>
+        <li>Problem-solving and numerical practice</li>
+        <li>Preparing students for examinations</li>
+        <li>Classroom communication and doubt-solving</li>
+        <li>Developing students' conceptual understanding</li>
+    </ul>
+
+    <h2>Professional Development</h2>
+
+    <div class="development">
+
+        <p>
+            I am continuing to develop my technical knowledge
+            in Mathematics and Computer Science alongside my
+            teaching experience.
+        </p>
+
+    </div>
+
+    <br>
+
+    <button onclick="showExperience()">Know More</button>
+
+    <p id="result"></p>
+
+</body>
+</html>

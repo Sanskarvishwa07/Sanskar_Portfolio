@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Projects</title>
+
+    <style>
+        body {
+            background-color: #FFFFFF;
+            font-family: Arial, sans-serif;
+            margin: 25px;
+            color: #1E293B;
+            line-height: 1.7;
+        }
+
+        h1 {
+            color: #142D4E;
+            border-bottom: 3px solid #D4AF37;
+            padding-bottom: 10px;
+        }
+
+        h2, h3 {
+            color: #142D4E;
+        }
+
+        .project {
+            background-color: #F1F5F9;
+            border: 1px solid #D6DEE8;
+            border-left: 5px solid #142D4E;
+            border-radius: 5px;
+            padding: 20px;
+            margin-bottom: 25px;
+            transition: 0.3s;
+        }
+
+        .project:hover {
+            background-color: #FFF9E8;
+            border-left-color: #D4AF37;
+            transform: translateY(-2px);
+        }
+
+        h2 {
+            margin-top: 0;
+        }
+
+        h3 {
+            margin-bottom: 5px;
+        }
+
+        ul {
+            padding-left: 25px;
+        }
+
+        li {
+            margin: 8px 0;
+        }
+
+        li::marker {
+            color: #D4AF37;
+        }
+
+        .label {
+            color: #142D4E;
+            font-weight: bold;
+        }
+
+        .note {
+            background-color: #FFFFFF;
+            border-left: 4px solid #D4AF37;
+            padding: 10px;
+            font-size: 14px;
+        }
+
+        button {
+            background-color: #142D4E;
+            color: #FFFFFF;
+            border: 2px solid #D4AF37;
+            padding: 11px 22px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 15px;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            background-color: #D4AF37;
+            color: #142D4E;
+        }
+
+        #result {
+            color: #142D4E;
+            font-weight: bold;
+            margin-top: 15px;
+        }
+    </style>
+
+    <script>
+        function showProject() {
+            document.getElementById("result").innerHTML =
+                "I enjoy applying Mathematics and Computer Science to solve real-world problems.";
+        }
+    </script>
+</head>
+
+<body>
+
+    <h1>My Projects</h1>
+
+    <p>
+        Here are some projects that demonstrate my interest
+        in programming, Mathematics and Computer Science.
+    </p>
+
+    <div class="project">
+
+        <h2>1. Smart Emergency Response System</h2>
+
+        <p>
+            A web-based application designed to assist users
+            in finding suitable hospitals during emergencies.
+        </p>
+
+        <h3>Technologies Used</h3>
+
+        <ul>
+            <li>Java and Spring Boot</li>
+            <li>React.js</li>
+            <li>PostgreSQL</li>
+            <li>Leaflet Maps</li>
+            <li>Shortest Path Algorithms</li>
+        </ul>
+
+        <p>
+            <span class="label">Key Features:</span>
+            Hospital selection, emergency severity assessment
+            and route calculation.
+        </p>
+
+    </div>
+
+    <div class="project">
+
+        <h2>2. MindGuard AI</h2>
+
+        <p>
+            A machine learning project designed to explore
+            mental health indicators using text-based analysis.
+        </p>
+
+        <h3>Technologies Used</h3>
+
+        <ul>
+            <li>Python</li>
+            <li>Machine Learning</li>
+            <li>FastAPI</li>
+            <li>HTML, CSS and JavaScript</li>
+        </ul>
+
+        <p>
+            <span class="label">Key Features:</span>
+            Text analysis and model-based predictions
+            related to mental health indicators.
+        </p>
+
+        <div class="note">
+            <i>
+                Note: Predictions are exploratory and are not
+                a substitute for professional mental health assessment.
+            </i>
+        </div>
+
+    </div>
+
+    <button onclick="showProject()">Know More</button>
+
+    <p id="result"></p>
+
+</body>
+</html>

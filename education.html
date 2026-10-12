@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Education</title>
+
+    <style>
+        body {
+            background-color: #FFFFFF;
+            font-family: Arial, sans-serif;
+            margin: 25px;
+            color: #1E293B;
+            line-height: 1.6;
+        }
+
+        h1 {
+            color: #142D4E;
+            border-bottom: 3px solid #D4AF37;
+            padding-bottom: 10px;
+        }
+
+        h3 {
+            color: #142D4E;
+            margin-top: 30px;
+        }
+
+        p {
+            font-size: 16px;
+        }
+
+        .table-container {
+            width: 100%;
+            overflow-x: auto;
+            margin-top: 20px;
+            border-radius: 5px;
+        }
+
+        table {
+            width: 100%;
+            min-width: 600px;
+            border-collapse: collapse;
+            background-color: #FFFFFF;
+        }
+
+        th, td {
+            border: 1px solid #D6DEE8;
+            padding: 12px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #142D4E;
+            color: #FFFFFF;
+            border-bottom: 3px solid #D4AF37;
+        }
+
+        td {
+            font-size: 14px;
+        }
+
+        tr:nth-child(even) {
+            background-color: #F1F5F9;
+        }
+
+        tbody tr:hover {
+            background-color: #FFF5D6;
+        }
+
+        ul {
+            padding-left: 25px;
+        }
+
+        li {
+            margin: 9px 0;
+        }
+
+        li::marker {
+            color: #D4AF37;
+        }
+
+        button {
+            background-color: #142D4E;
+            color: #FFFFFF;
+            border: 2px solid #D4AF37;
+            padding: 11px 22px;
+            margin-top: 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 15px;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            background-color: #D4AF37;
+            color: #142D4E;
+        }
+
+        #result {
+            color: #142D4E;
+            font-weight: bold;
+            margin-top: 15px;
+        }
+    </style>
+
+    <script>
+        function showEducation() {
+            document.getElementById("result").innerHTML =
+                "I am currently pursuing my postgraduate degree at Jamia Millia Islamia and developing my mathematical and technical knowledge.";
+        }
+    </script>
+</head>
+
+<body>
+
+    <h1>My Education</h1>
+
+    <p>
+        My academic journey has helped me develop mathematical
+        knowledge, analytical thinking and problem-solving skills.
+    </p>
+
+    <div class="table-container">
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Qualification</th>
+                    <th>Institution</th>
+                    <th>Year</th>
+                    <th>Percentage</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td>Class X</td>
+                    <td>Saraswati Higher Secondary School, Rahatgarh</td>
+                    <td>2018</td>
+                    <td>93.6%</td>
+                </tr>
+
+                <tr>
+                    <td>Class XII</td>
+                    <td>Saraswati Higher Secondary School, Rahatgarh</td>
+                    <td>2020</td>
+                    <td>90.2%</td>
+                </tr>
+
+                <tr>
+                    <td>B.Sc. Mathematics</td>
+                    <td>Holkar Science College, DAVV, Indore</td>
+                    <td>2020–2023</td>
+                    <td>75%</td>
+                </tr>
+
+                <tr>
+                    <td>M.Sc. Mathematics with Computer Science</td>
+                    <td>Jamia Millia Islamia, New Delhi</td>
+                    <td>2025–2027</td>
+                    <td>Currently Pursuing</td>
+                </tr>
+            </tbody>
+        </table>
+
+    </div>
+
+    <h3>Academic Interests</h3>
+
+    <ul>
+        <li>Mathematics and Applied Mathematics</li>
+        <li>Computer Science</li>
+        <li>Algorithms and Problem-Solving</li>
+        <li>Artificial Intelligence and Machine Learning</li>
+    </ul>
+
+    <button onclick="showEducation()">Know More</button>
+
+    <p id="result"></p>
+
+</body>
+</html>
